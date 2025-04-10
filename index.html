@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colgroup Maker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+  <div class="total-header">
+    <div class="logo"></div>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1>Colgroup Maker</h1>
+      <p class="guide">💭 추가 버튼을 눌러 col을 추가하고 마우스를 이용해 너비를 조절해 보세요.</p>
+      <div class="metadata">
+        <span>Version 1.1</span>
+        <span>Hyerin Ro</span>
+        <span>hyerinRo@gamil.com</span>
+      </div>
+    </header>
+
+
+    <div class="total-wrap">
+      <div class="maker-wrap">
+        <div class="control-wrap">
+          <div class="controls">
+            <button id="addBox">
+              <span class="material-symbols-outlined">add </span>
+              <span>추가</span>
+            </button>
+
+            <button id="removeBox">
+              <span class="material-symbols-outlined">
+                remove
+              </span>
+              <span>제거</span>
+            </button>
+
+            <div id="resetBox" class="reset">
+              <span class="material-symbols-outlined"> refresh </span>
+              <span>새로고침</span>
+            </div>
+
+          </div>
+          <div class="box-count" id="boxCount">박스 개수: 1</div>
+        </div>
+        <div class="box-container" id="boxContainer">
+          <!-- Boxes will be dynamically added here -->
+        </div>
+      </div>
+
+      <div class="colgroup-container">
+        <!-- <h3>Code</h3> -->
+        <div class="title">
+          <span class="info">💭 아래 코드를 붙여 넣으세요.</span>
+          <button id="copyButton">
+            <span class="material-symbols-outlined">
+              content_copy
+            </span>
+            <span>복사</span>
+          </button>
+        </div>
+        <pre id="colgroupDisplay">
+
+        </pre>
+      </div>
+    </div>
+
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

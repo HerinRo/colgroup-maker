@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap');
+
+/* Common */
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+div,
+button,
+header {
+  padding: 0;
+  margin: 0;
+}
+
+/* Styles */
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  background-color: #212529;
+  padding: 5rem 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+}
+
+.controls {
+  margin-bottom: 1.25rem;
+}
+
+/* 제목 */
+
+h1 {
+  font-size: 2.5rem;
+  color: #f1f3f5;
+  margin: 0;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.guide {
+  color: #adb5bd;
+  font-size: 14px;
+  margin-bottom: 2rem;
+  padding-left: 0.25rem;
+}
+
+.metadata {
+  color: #495057;
+  font-size: 12px;
+  margin-bottom: 5rem;
+}
+
+.metadata span:not(:last-child):after {
+  content: '';
+  height: 0.5rem;
+  width: 0.75px;
+  background-color: #525961;
+  display: inline-block;
+  margin: 0 0.75rem;
+}
+
+/* 추가 및 감소 버튼 */
+
+.control-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.box-count {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #adb5bd;
+}
+
+button {
+  padding: 0.35rem 1rem;
+  cursor: pointer;
+  border: 1px solid #495057;
+  border-radius: 0.25rem;
+  color: #ced4da;
+  background: #495057;
+  margin-right: 0.25rem;
+  transition: 0.1s;
+  display: flex;
+  align-items: center;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+button:hover {
+  /* background-color: #dbe4ff; */
+  filter: brightness(0.93);
+
+}
+
+.reset {
+  display: flex;
+  align-items: center;
+  color: #ced4da;
+  font-size: 13px;
+  padding: 0.4rem 0.5rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: 0.15s;
+}
+
+.reset:hover {
+  background-color: #394047;
+}
+
+/* 구글 아이콘 */
+
+.material-symbols-outlined {
+  transform: scale(0.65);
+  margin-left: -0.25rem;
+}
+
+
+/* 전체 박스 */
+
+.total-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.maker-wrap {
+  padding: 2rem;
+  border-radius: 0.25rem;
+  background-color: #343a40;
+  box-shadow: #8fe1ff2e 0px 12px 42px -24px;
+}
+
+/* 큰 박스 */
+
+.box-container {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  position: relative;
+  /* border: 1px solid #ced4da; */
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+/* 작은 박스 */
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #adb5bd;
+  background-color: #e9ecef;
+  transition: background-color 0.1s;
+  position: relative;
+  color: #495057;
+}
+
+.box:hover {
+  background-color: #dee2e6;
+}
+
+.box:last-child {
+  border-right: none;
+}
+
+/* 구분선 */
+
+.divider {
+  width: 0.25rem;
+  cursor: ew-resize;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  z-index: 1;
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+
+.divider:hover {
+  background-color: #343a40;
+}
+
+.box:last-of-type .divider {
+  display: none;
+}
+
+/* Colgroup */
+
+h3 {
+  margin: 0;
+}
+
+.width-display {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #333;
+}
+
+/* 텍스트 수정으로 너비 조정 */
+
+.width-display.editable {
+  cursor: text;
+  border: 1px solid #ccc;
+  padding: 2px;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.colgroup-container {
+  text-align: left;
+  white-space: pre-wrap;
+  display: flex;
+  flex-direction: column;
+  background-color: #343a40;
+  color: #f8f9fa;
+  border-radius: 0.25rem;
+  box-shadow: #8fe1ff2e 0px 12px 42px -24px;
+}
+
+/* 복사 버튼 */
+
+.colgroup-container .title {
+  display: flex;
+  padding: 0.75rem 0.5rem;
+  /* justify-content: end; */
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.25rem;
+}
+
+.colgroup-container .title .info {
+  font-size: 14px;
+  color: #adb5bd;
+  margin-left: 0.5rem;
+}
+
+.colgroup-container button {
+  padding: 0.25rem 0.75rem;
+  border-radius: 3px;
+  font-size: 14px;
+  margin-right: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+#colgroupDisplay {
+  font-family: "Fragment Mono", monospace;
+  font-size: 13px;
+  padding: 2rem;
+  font-weight: 400;
+  background-color: #212529;
+  margin: 1rem;
+  overflow-y: scroll;
+  border-radius: 2px;
+  height: 14rem;
+  color: #adb5bd;
+  line-height: 130%;
+}
+
+#colgroupDisplay::-webkit-scrollbar {
+  width: 15px;
+  background-color: #212529;
+}
+
+#colgroupDisplay::-webkit-scrollbar-thumb {
+  background-color: #495057;
+  border: 4px solid #212529;
+}
